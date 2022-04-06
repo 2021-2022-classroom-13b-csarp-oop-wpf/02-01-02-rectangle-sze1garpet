@@ -30,5 +30,49 @@ namespace RectangleProject.Models
                 sideA = value;
             }
         }
+
+        public double SideB
+        {
+            get
+            {
+                return sideB;
+            }
+
+            set
+            {
+                sideB = value;
+            }
+        }
+
+        public double Area
+        {
+            get
+            {
+                double area = sideA * sideB;
+                return area;
+            }
+        }
+
+        public double Perimeter
+        {
+            get
+            {
+                double perimeter = 2 * (sideA + sideB);
+                return perimeter;
+            }
+        }
+
+        public override string ToString()
+        {
+            double sideARound = Math.Round(sideA, 2);
+            double sideBRound = Math.Round(sideB, 2);
+            double areaRound = Math.Round(Area, 2);
+            double perimeterRound = Math.Round(Perimeter, 2);
+            string result = "A oldal: " + sideARound + "\n";
+            result += "B oldal: " + sideBRound + "\n";
+            result += "Terület: " + areaRound + "\n";
+            result += "Kerület: " + perimeterRound + "\n";
+            return result;
+        }
     }
 }
