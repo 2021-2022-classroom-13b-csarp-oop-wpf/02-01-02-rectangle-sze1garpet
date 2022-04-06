@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RectangleProject.Model
+namespace RectangleProject.Models
 {
-    class Rectangle
+    public class Rectangle
     {
         // mezőnevek
         private double sideA;
@@ -15,6 +15,20 @@ namespace RectangleProject.Model
         {
             this.sideA = sideA;
             this.sideB = sideB;
+        }
+
+        // tulajdonság (property)
+        public double SideA
+        {
+            get
+            {
+                return sideA;
+            }
+
+            set
+            {
+                sideA = value;
+            }
         }
     }
 }
